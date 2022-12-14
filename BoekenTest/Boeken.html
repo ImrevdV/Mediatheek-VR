@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <a-scene>
+
+        <a-camera id="camera">
+            <a-cursor id="js--cursor" color="black"></a-cursor>
+            <a-entity
+    animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+    animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+    animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
+    cursor="fuse: true;"
+    position="0 0 -1"
+    geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+    material="color: black; shader: flat"
+    raycaster="far: 20; interval: 1000; objects: .kast, .vind"></a-entity>
+        </a-camera>
+        
+        <a-plane position="0 -1.5 -7" color="gray" width ="50" height="50" rotation= "-90 0 0"></a-plane>
+
+        <a-box class="kast" position="1 0 -5" color="blue"></a-box>
+        <a-box class="shine" position="1 0 -5" color="yellow" scale="1.1 1.1 1.1" material="opacity: 0; transparent: true"></a-box>
+        <a-box class="kast" position="3 0 -5" color="red"></a-box>
+        <a-box class="shine" position="3 0 -5" color="yellow" scale="1.1 1.1 1.1" material="opacity: 0; transparent: true"></a-box>
+
+        <a-box class="vind" position="-3 0 -5" color="blue"></a-box>
+        <a-box class="vind" position="-5 0 -5" color="red"></a-box>
+
+
+    
+    </a-scene>
+</body>
+</html> 
