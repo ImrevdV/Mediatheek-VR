@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="/js/main.js"></script>
+    <title>Dutch Design VR</title>
+</head>
+
+<body>
+    <a-scene background="color: #333333">
+        <a-assets>
+            <a-sound id="cubq" src="/assets/music/Helmet.mp3"></a-sound>
+            <a-sound id="pop-snd" src="/assets/Pop-Bubble (sound effect) (mp3cut.net).mp3"></a-sound>
+            <a-asset-item id="jukebox-obj" src="/assets/20344_Jukebox_bubbler_style_V2 Textured.obj"></a-asset-item>
+        </a-assets>
+        <a-camera position="0 2.1 0">
+            <a-entity
+                animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+                animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+                animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
+                cursor="fuse: true; fuseTimeout: 500" position="0 0 -1"
+                geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.015"
+                material="color: #ffffff; shader: flat">
+            </a-entity>
+        </a-camera>
+        <a-entity id="jukebox" position="-0.5 -10 -10" scale="0.5 0.5 0.5" rotation="-110 0 0" obj-model="obj: #jukebox-obj"
+            material="color: brown; roughness: 1; metalness: 0.2"
+            sound="src: #cubq; autoplay: false; distanceModel: linear; positional: false; volume: 0.1" onclick="pauseSong()"></a-entity>
+        <a-sphere color="black" position="2 -3 -10" onclick="skipSong()"></a-sphere>
+        <a-sphere color="black" position="-2 -3 -10" onclick="rewSong()"></a-sphere>
+
+        <a-sphere color="skyblue" position="5 0 -15" sound="src: #pop-snd; on: click; positional: false" onclick="pop(this)"></a-sphere>
+        <a-sphere color="skyblue" position="-5 2 -15" sound="src: #pop-snd; on: click; positional: false" onclick="pop(this)"></a-sphere>
+        <a-sphere color="skyblue" position="9 7 -15" sound="src: #pop-snd; on: click; positional: false" onclick="pop(this)"></a-sphere>
+        <a-sphere color="skyblue" position="11 11 -15" sound="src: #pop-snd; on: click; positional: false" onclick="pop(this)"></a-sphere>
+        <a-sphere color="skyblue" position="2 9 -15" sound="src: #pop-snd; on: click; positional: false" onclick="pop(this)"></a-sphere>
+        <a-sphere color="skyblue" position="-9 3 -15" sound="src: #pop-snd; on: click; positional: false" onclick="pop(this)"></a-sphere>
+    </a-scene>
+</body>
+
+</html>
