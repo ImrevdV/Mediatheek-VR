@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <a-scene>
+
+        <a-camera id="camera">
+            <a-cursor id="js--cursor" color="black"></a-cursor>
+            <a-entity
+    animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+    animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+    animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
+    cursor="fuse: true;"
+    position="0 0 -1"
+    geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+    material="color: black; shader: flat"
+    raycaster="far: 20; interval: 1000; objects: .kast, .vind, .show"></a-entity>
+        </a-camera>
+        
+        <a-plane position="6 -1.5 -7" color="purple" width ="50" height="50" rotation= "-90 0 0"></a-plane>
+        <a-plane position="30 -1.5 -7" color="purple" width ="50" height="50" rotation= "-90 0 0"></a-plane>
+        <a-plane position="2 -1.5 -15" color="gray" width ="40" height="30" rotation= "0 0 0"></a-plane>
+        <a-plane position="22 -1.5 -25d" color="gray" width ="20" height="30" rotation= "0 90 0"></a-plane>
+        <a-plane position="40 -1.5 -25d" color="gray" width ="40" height="30" rotation= "0 0 0"></a-plane>
+
+        <a-box class="show" position="0 0.5 -14" color="brown" scale="5 0.2 1">
+            <a-box class="show" position="-0.25 4 0" scale="0.4 5 0.2"></a-box>
+            <a-box class="show" position="0.25 4 0" scale="0.4 5 0.2"></a-box>      
+        </a-box>
+
+        <a-plane class="bord" position="0 -6 -13.4"  color="black" width ="5" height="6" rotation= "0 0 0" material="opacity: 0.5; transparent: true">
+            <a-text  value="algemeen" position="-2 2.5 0">
+                <a-plane class="vind" id="0" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="wijsgebeerte" position="-2 2.2 0">
+                <a-plane class="vind" id="0" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="godsdienst"position="-2 1.9 0">
+                <a-plane class="vind" id="1" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="sociale wetenschappen" position="-2 1.6 0">
+                <a-plane class="vind" id="1" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="economie" position="-2 1.3 0">
+                <a-plane class="vind" id="2" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="rechtswetenschap" position="-2 1 0">
+                <a-plane class="vind" id="3" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="krijgswetenschap" position="-2 0.7 0">
+                <a-plane class="vind" id="3" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="psychologie" position="-2 0.4 0">
+                <a-plane class="vind" id="4" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="opvoeding" position="-2 0.1 0">
+                <a-plane class="vind" id="6" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="wiskunde, informatica, natuurwetenschappen" position="-2 -0.2 0">
+                <a-plane class="vind" id="7" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="geneeskunde, gezondheidszorg, sport" position="-2 -0.5 0">
+                <a-plane class="vind" id="8" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="bord-, denk- en kansspelen, handarbeid, huishoudkunde" position="-2 -0.8 0">
+                <a-plane class="vind" id="10" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="land- en tuinbouw, jacht, visserij" position="-2 -1.1 0">
+                <a-plane class="vind" id="11" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="techniek" position="-2 -1.4 0">
+                <a-plane class="vind" id="11" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="kunst; algemeen, beeldende kunst" position="-2 -1.7 0">
+                <a-plane class="vind" id="11" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="muziek, dans , toneel, film" position="-2 -2 0">
+                <a-plane class="vind" id="11" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="taal- en letterkunde" position="-2 -2.3 0">
+                <a-plane class="vind" id="12" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="geschiedenis" position="-2 -2.6 0">
+                <a-plane class="vind" id="12" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+            <a-text value="land- en volkenkunde" position="-2 -2.9 0">
+                <a-plane class="vind" id="12" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
+            </a-text>
+        </a-plane>
+
+        <a-box class="kast" position="6 0 -12" color="blue" depth="5" height="6" width="1.5"></a-box>
+        <a-box class="shine" position="6 0 -12" color="yellow" depth="5" height="6" width="1.5" scale="1.1 1.1 1.1" material="opacity: 0; transparent: true"></a-box>
+        
+        <a-box class="kast" position="12 0 -12" color="red" depth="5" height="6" width="1.5"></a-box>
+        <a-box class="shine" position="12 0 -12" color="yellow" depth="5" height="6" width="1.5" scale="1.1 1.1 1.1" material="opacity: 0; transparent: true"></a-box>
+
+        <a-box class="kast" position="30 0 -12" color="red" depth="8" height="6" width="1.5"></a-box>
+        <a-box class="shine" position="30 0 -12" color="yellow" depth="8" height="6" width="1.5" scale="1.1 1.1 1.1" material="opacity: 0; transparent: true"></a-box>
+
+        <a-box class="kast" position="36 0 -12" color="red" depth="8" height="6" width="1.5"></a-box>
+        <a-box class="shine" position="36 0 -12" color="yellow" depth="8" height="6" width="1.5" scale="1.1 1.1 1.1" material="opacity: 0; transparent: true"></a-box>
+
+        <a-box class="kast" position="42 0 -14" color="red" depth="12" height="6" width="1.5"></a-box>
+        <a-box class="shine" position="42 0 -14" color="yellow" depth="12" height="6" width="1.5" scale="1.1 1.1 1.1" material="opacity: 0; transparent: true"></a-box>
+
+        <a-box class="kast" position="54 0 -20" color="blue" depth="10" height="6" width="1.5" rotation= "0 90 0"></a-box>
+        <a-box class="shine" position="6 0 -12" color="yellow" depth="10" height="6" width="1.5" scale="1.1 1.1 1.1" material="opacity: 0; transparent: true"></a-box>
+
+        <a-box class="kast" position="66 0 -14" color="red" depth="12" height="6" width="1.5"></a-box>
+        <a-box class="shine" position="66 0 -14" color="yellow" depth="12" height="6" width="1.5" scale="1.1 1.1 1.1" material="opacity: 0; transparent: true"></a-box>
+
+        <a-box class="kast" position="54 0 -9" color="blue" depth="10" height="6" width="1.5" rotation= "0 90 0"></a-box>
+        <a-box class="shine" position="6 0 -12" color="yellow" depth="10" height="6" width="1.5" scale="1.1 1.1 1.1" material="opacity: 0; transparent: true"></a-box>
+
+        <a-box class="kast" position="36 0 3" color="blue" depth="10" height="6" width="1.5"></a-box>
+        <a-box class="shine" position="36 0 3" color="yellow" depth="10" height="6" width="1.5" scale="1.1 1.1 1.1" material="opacity: 0; transparent: true"></a-box>
+
+        <a-box class="kast" position="33 0 3" color="blue" depth="10" height="6" width="1.5"></a-box>
+        <a-box class="shine" position="33 0 3" color="yellow" depth="10" height="6" width="1.5" scale="1.1 1.1 1.1" material="opacity: 0; transparent: true"></a-box>
+
+        <a-box class="kast" position="30 0 3" color="blue" depth="10" height="6" width="1.5"></a-box>
+        <a-box class="shine" position="30 0 3" color="yellow" depth="10" height="6" width="1.5" scale="1.1 1.1 1.1" material="opacity: 0; transparent: true"></a-box>
+
+        <a-box class="kast" position="24 0 3" color="blue" depth="10" height="6" width="1.5"></a-box>
+        <a-box class="shine" position="24 0 3" color="yellow" depth="10" height="6" width="1.5" scale="1.1 1.1 1.1" material="opacity: 0; transparent: true"></a-box>
+
+        <a-box class="kast" position="6 0 3" color="blue" depth="10" height="6" width="1.5"></a-box>
+        <a-box class="shine" position="6 0 3" color="yellow" depth="10" height="6" width="1.5" scale="1.1 1.1 1.1" material="opacity: 0; transparent: true"></a-box>
+    </a-scene>
+</body>
+</html> 
