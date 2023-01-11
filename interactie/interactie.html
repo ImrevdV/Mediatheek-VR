@@ -15,6 +15,8 @@
         <a-assets>
             <a-asset-item id ="showtafel-obj" src="modellen/showtafel.obj"></a-asset-item>
             <a-asset-item id ="showtafel-mtl" src="modellen/showtafel.mtl"></a-asset-item>
+            <a-asset-item id ="boekenkast-obj" src="modellen/bookshelf.obj"></a-asset-item>
+            <a-asset-item id ="boekenkast-mtl" src="modellen/bookshelf.mtl"></a-asset-item>
         </a-assets>
 
         <a-camera id="camera">
@@ -102,6 +104,8 @@
                 <a-plane class="vind" id="12" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
             </a-text>
         </a-plane>
+
+        <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" position="0 0 0"> </a-entity>
 
         <a-box class="kast" position="6 0 -12" color="blue" depth="5" height="6" width="1.5"></a-box>
         <a-box class="shine" position="6 0 -12" color="yellow" depth="5" height="6" width="1.5" scale="1.1 1.1 1.1" material="opacity: 0; transparent: true"></a-box>
