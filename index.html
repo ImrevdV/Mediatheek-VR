@@ -12,6 +12,10 @@
 
 <body>
     <a-scene background="color: #333333">
+        <a-assets>
+            <a-asset-item id="bookshelf-obj" src="/assets/bookshelf.obj"></a-asset-item>
+            <a-asset-item id="bookshelf-mtl" src="/assets/bookshelf.mtl"></a-asset-item>
+        </a-assets>
         <a-camera position="0 2.1 0">
             <a-entity
                 animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
@@ -22,6 +26,8 @@
                 material="color: #ffffff; shader: flat">
             </a-entity>
         </a-camera>
+        <a-entity position="0 0 0" scale="0.6 0.6 0.6"
+            obj-model="obj: #bookshelf-obj; mtl: #bookshelf-mtl"></a-entity>
     </a-scene>
 </body>
 
