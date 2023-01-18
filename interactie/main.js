@@ -34,7 +34,7 @@ window.onload = () =>{
             console.log(vind.id);
             shine[vind.id].setAttribute("opacity", 0.5);
             bord[0].object3D.position.set(0, -6, -12.4);
-            vindtextid = (i);
+            vindtextid = (vind.id);
             console.log(vindtextid);
         }
     }
