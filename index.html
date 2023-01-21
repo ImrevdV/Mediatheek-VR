@@ -17,6 +17,7 @@
             <a-asset-item id="bookshelf-mtl" src="/assets/bookshelf.mtl"></a-asset-item>
             <a-asset-item id="pc-obj" src="/assets/computer.obj"></a-asset-item>
             <a-asset-item id="pc-mtl" src="/assets/computer.mtl"></a-asset-item>
+            <img id="img-floor" src="/assets/tiledfloor.png"></img>
         </a-assets>
         <a-camera position="0 2.1 0">
             <a-entity
@@ -28,8 +29,9 @@
                 material="color: #ffffff; shader: flat">
             </a-entity>
         </a-camera>
-        <a-entity position="10 0 0" scale="0.6 0.6 0.6"
-            obj-model="obj: #pc-obj; mtl: #pc-mtl"></a-entity>
+        <a-entity position="10 0 0" scale="0.6 0.6 0.6" obj-model="obj: #pc-obj; mtl: #pc-mtl"></a-entity>
+        <a-plane position="0 -2 0" rotation="-90 0 0" width="400" height="400"
+            material="src: #img-floor; repeat: 200 200;"></a-plane>
     </a-scene>
 </body>
 
