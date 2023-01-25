@@ -21,9 +21,12 @@
             <a-asset-item id ="computer-mtl" src="modellen/computer.mtl"></a-asset-item>
             <a-asset-item id ="werkplekOrangje-obj" src="modellen/werkplekOrange.obj"></a-asset-item>
             <a-asset-item id ="werkplekOrangje-mtl" src="modellen/werkplekOrange.mtl"></a-asset-item>
+            <a-asset-item id ="pijl-obj" src="modellen/pijl.obj"></a-asset-item>
+            <a-asset-item id ="pijl-mtl" src="modellen/pijl.mtl"></a-asset-item>
+            <a-asset-item id ="plafond-texture" src="modellen/plafond-texture.png"></a-asset-item>
         </a-assets>
 
-        <a-camera id="camera" posistion="-2 0 4">
+        <a-camera id="camera" camera look-controls position="0 1 0" wasd-controls-enabled="false">
             <a-cursor id="js--cursor" color="black"></a-cursor>
             <a-entity
     animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
@@ -33,25 +36,94 @@
     position="0 0 -1"
     geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
     material="color: black; shader: flat"
-    raycaster="far: 20; interval: 1000; objects: .kast, .vind, .show"></a-entity>
+    raycaster="far: 20; interval: 1000; objects: .kast, .vind, .show, .pijl"></a-entity>
 
-    <a-plane class="vindtext" id="0" position="0 2 3"  color="black" width ="2" height="0.5" rotation= "0 0 0" material="opacity: 0.5; transparent: true">
+    <a-plane class="vindtext" id="0" position="0 2 2"  color="black" width ="2" height="0.5" rotation= "0 0 0" material="opacity: 0.5; transparent: true">
         <a-text  value="rubriek gevonden" position="-0.85 0 0"></a-text>
     </a-plane>
         </a-camera>
-        
-        <a-plane position="6 -1.5 -7" color="purple" width ="50" height="50" rotation= "-90 0 0"></a-plane>
-        <a-plane position="30 -1.5 -7" color="purple" width ="50" height="50" rotation= "-90 0 0"></a-plane>
-        <a-plane position="60 -1.5 -7" color="purple" width ="50" height="50" rotation= "-90 0 0"></a-plane>
 
-        <a-box class="show" position="5 0.5 -24" color="brown" depth="3" width="6" height="0.2">
+        <!--plafond en bijbehoren-->
+        <a-plane position="0 3 0" rotation="90 0 0" height="100" width="100" material="#plafond-texture; repeat: 50 50"></a-plane>
+        <!--<a-plane position="0 3 0" rotation="90 0 0" height="100" width="100" color="white"></a-plane>-->
+    <!--lampen-->
+        <a-entity position="0.25 0 -1.25">
+            <a-box position="-2.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="-2.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+
+            <a-box position="1.5 3 -1.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="1.5 3 -4" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="1.5 3 -6.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="1.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="1.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+
+            <a-box position="5.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="5.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+
+            <a-box position="9.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="9.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+
+            <a-box position="13.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="13.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="13.5 3 -14" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="13.5 3 -16.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+
+            <a-box position="17.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="17.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="17.5 3 -14" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="17.5 3 -16.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            
+            <a-box position="21.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="21.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="21.5 3 -14" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="21.5 3 -16.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            
+            <a-box position="25.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="25.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="25.5 3 -14" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="25.5 3 -16.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            
+            <a-box position="29.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="29.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="29.5 3 -14" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="29.5 3 -16.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            
+            <a-box position="33.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="33.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="33.5 3 -14" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="33.5 3 -16.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            
+            <a-box position="37.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="37.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="37.5 3 -14" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+            <a-box position="37.5 3 -16.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+        </a-entity>
+<!--muren, vanaf binnenkomst, links beginnen-->
+        <a-plane position="-2   1.5 -4.5"  rotation="0 90 0"  height="5" width="9" color="#EFEFEF"></a-plane>
+        <a-plane position="-2.5 1.5 -9"    rotation="0 180 0" height="5" width="1" color="#EFEFEF"></a-plane>
+        <a-plane position="-3   1.5 -12"   rotation="0 90 0"  height="5" width="12" color="#EFEFEF"></a-plane>
+        <a-plane position="4.5  1.5 -18"   rotation="0 0 0"   height="5" width="15" color="#EFEFEF"></a-plane>
+        <a-plane position="12   1.5 -22.5" rotation="0 90 0" height="5" width="9" color="#EFEFEF"></a-plane>
+        <a-plane position="26   1.5 -25"   rotation="0 0 0" height="5" width="58" color="#EFEFEF"></a-plane>
+        <a-plane position="55   1.5 -16.5" rotation="0 -90 0" height="5" width="18" color="#EFEFEF"></a-plane>
+        <a-plane position="36.5 1.5 -9" rotation="0 180 0" height="5" width="67" color="#EFEFEF"></a-plane>
+        <a-plane position="3 1.5 -4.5" rotation="0 -90 0" height="5" width="9" color="#EFEFEF"></a-plane>
+
+
+<!--vloer-->
+        <a-plane position="30 -1 0" rotation="-90 0 0" height="100" width="100" color="purple"></a-plane>
+
+        <a-entity light="type: ambient; intensity: 1; color: #CCC"></a-entity>
+        
+
+        <a-box class="show" position="3 0 -17.4" color="brown" depth="3" width="6" height="0.2" scale="0.5 0.5 0.5">
             <a-box position="-2 -5 0" color="black" height="10" depth="0.5" width="0.5"></a-box>
             <a-box position="2 -5 0" color="black" height="10" depth="0.5" width="0.5"></a-box>
             <a-entity obj-model = "obj: #computer-obj; mtl: #computer-mtl" class="show" position="-1.1 0.1 0 " rotation="0 -90 0" scale="1 1 1"> </a-entity>
             <a-entity obj-model = "obj: #computer-obj; mtl: #computer-mtl" class="show" position="1.1 0.1 0 " rotation="0 -90 0" scale="1 1 1"> </a-entity>
         </a-box>
 
-        <a-plane class="bord" position="5 -6 -22.4"  color="black" width ="5" height="6" rotation= "0 0 0" material="opacity: 0.5; transparent: true">
+        <a-plane class="bord" position="5 -6 -14"  color="black" width ="5" height="6" rotation= "0 0 0" material="opacity: 0.5; transparent: true" scale="0.5 0.5 0.5">
             <a-text  value="algemeen" position="-2 2.5 0">
                 <a-plane class="vind" id="0" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
             </a-text>
@@ -111,7 +183,7 @@
             </a-text>
         </a-plane>
 
-        <a-plane position="10 0 -10" color="black" width ="0.1" height="0.1" material="opacity: 0; transparent: true">
+        <a-plane position="5 -0.2 -12" color="black" width ="0.1" height="0.1" material="opacity: 0; transparent: true" scale="0.5 0.5 0.5">
         <a-entity obj-model = "obj: #werkplekOrangje-obj; mtl: #werkplekOrangje-mtl" position="10 -1 6" rotation="0 90 0"></a-entity>
         <a-entity obj-model = "obj: #werkplekOrangje-obj; mtl: #werkplekOrangje-mtl" position="16 -1 6" rotation="0 90 0"></a-entity>
 
@@ -121,14 +193,15 @@
         <a-entity obj-model = "obj: #werkplekOrangje-obj; mtl: #werkplekOrangje-mtl" position="74 -1 -15" rotation="0 180 0"></a-entity>
         <a-entity obj-model = "obj: #werkplekOrangje-obj; mtl: #werkplekOrangje-mtl" position="72 -1 -15" rotation="0 0 0"></a-entity>
 
-        <a-entity obj-model = "obj: #showtafel-obj; mtl: #showtafel-mtl" position="2 -1 10" rotation="0 90 0" scale="0.3 0.3 0.3"> </a-entity>
-        <a-entity obj-model = "obj: #showtafel-obj; mtl: #showtafel-mtl" position="76 -1 -10" rotation="0 -90 0" scale="0.3 0.3 0.3"> </a-entity>
+        <a-entity obj-model = "obj: #showtafel-obj; mtl: #showtafel-mtl" position="-5.5 -1 10" rotation="0 90 0" scale="0.3 0.3 0.3"> </a-entity>
+        <a-entity obj-model = "obj: #showtafel-obj; mtl: #showtafel-mtl" position="3 -1 -10" rotation="0 -90 0" scale="0.3 0.3 0.3"> </a-entity>
+        <a-entity obj-model = "obj: #showtafel-obj; mtl: #showtafel-mtl" position="76 z-1 -10" rotation="0 -90 0" scale="0.3 0.3 0.3"> </a-entity>
 
-        <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="6 -1.5 -12"> </a-entity>
-        <a-box class="shine" position="6 0 -12" color="yellow" depth="6.1" height="7.5" width="1.1"  material="opacity: 0; transparent: true"></a-box>
+        <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="6 -1.5 -9"> </a-entity>
+        <a-box class="shine" position="6 0 -9" color="yellow" depth="6.1" height="7.5" width="1.1"  material="opacity: 0; transparent: true"></a-box>
         
-        <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="12 -1.5 -12"> </a-entity>
-        <a-box class="shine" position="12 0 -12" color="yellow" depth="6.1" height="7.5" width="1.1" material="opacity: 0; transparent: true"></a-box>
+        <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="12 -1.5 -9"> </a-entity>
+        <a-box class="shine" position="12 0 -9" color="yellow" depth="6.1" height="7.5" width="1.1" material="opacity: 0; transparent: true"></a-box>
 
         <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="30 -1.5 -12"> </a-entity>
         <a-box class="shine" position="30 0 -12" color="yellow" depth="6.1" height="7.5" width="1.1" material="opacity: 0; transparent: true"></a-box>
@@ -140,13 +213,13 @@
         <a-box class="shine" position="42 0 -14" color="yellow" depth="6.1" height="7.5" width="1.1" material="opacity: 0; transparent: true"></a-box>
 
         <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="54 -1.5 -20" rotation= "0 90 0"> </a-entity>
-        <a-box class="shine" position="6 0 -12" color="yellow" depth="6.1" height="7.5" width="1.1" material="opacity: 0; transparent: true"></a-box>
+        <a-box class="shine" position="54 0 -20" color="yellow" depth="6.1" height="7.5" width="1.1" material="opacity: 0; transparent: true"></a-box>
 
         <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="66 -1.5 -14"> </a-entity>
         <a-box class="shine" position="66 0 -14" color="yellow" depth="6.1" height="7.5" width="1.1" material="opacity: 0; transparent: true"></a-box>
 
         <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="54 -1.5 -9" rotation= "0 90 0"> </a-entity>
-        <a-box class="shine" position="6 0 -12" color="yellow" depth="6.1" height="7.5" width="1.1" material="opacity: 0; transparent: true"></a-box>
+        <a-box class="shine" position="54 0 -9" color="yellow" depth="6.1" height="7.5" width="1.1" material="opacity: 0; transparent: true"></a-box>
 
         <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="36 -1.5 3"> </a-entity>
         <a-box class="shine" position="36 0 3" color="yellow" depth="6.1" height="7.5" width="1.1" material="opacity: 0; transparent: true"></a-box>
@@ -169,6 +242,34 @@
         <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" position="80 -1.5 -14"> </a-entity>
         <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" position="86 -1.5 -14"> </a-entity>
     </a-plane>
+
+    <a-box class="destinations" id="0" position="0 0 0" color="blue" material="opacity: 0; transparent: true" >
+        <a-entity id="1" obj-model = "obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="0 0 -1" scale="0.2 0.2 0.2" rotation="0 0 0" visible="true"> </a-entity>
+    </a-box>
+
+    <a-box class="destinations" id="1" position="3 0 -14" color="blue" material="opacity: 0; transparent: true">
+       <a-entity id="2" obj-model = "obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="1 0 0" scale="0.2 0.2 0.2" rotation="0 -90 0" visible="false"> </a-entity>
+        <a-entity id="0" obj-model = "obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="0 0 1" scale="0.2 0.2 0.2" rotation="0 180 0" visible="false"> </a-entity>
+    </a-box>
+
+    <a-box class="destinations" id="2" position="15 0 -14" color="blue" material="opacity: 0; transparent: true">
+        <a-entity id="3" obj-model = "obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="1 0 0" scale="0.2 0.2 0.2" rotation="0 -90 0" visible="false"> </a-entity>
+        <a-entity id="1" obj-model = "obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="-1 0 0" scale="0.2 0.2 0.2" rotation="0 90 0" visible="false"> </a-entity>        
+    </a-box>
+
+    <a-box class="destinations" id="3" position="25 0 -14" color="blue" material="opacity: 0; transparent: true">
+        <a-entity id="4" obj-model = "obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="1 0 0" scale="0.2 0.2 0.2" rotation="0 -90 0" visible="false"> </a-entity>
+        <a-entity id="2" obj-model = "obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="-1 0 0" scale="0.2 0.2 0.2" rotation="0 90 0" visible="false"> </a-entity>        
+    </a-box>
+
+    <a-box class="destinations" id="4" position="40 0 -14" color="blue" material="opacity: 0; transparent: true">
+        <a-entity id="5" obj-model = "obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="1 0 0" scale="0.2 0.2 0.2" rotation="0 -90 0" visible="false"> </a-entity>
+        <a-entity id="3" obj-model = "obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="-1 0 0" scale="0.2 0.2 0.2" rotation="0 90 0" visible="false"> </a-entity>        
+    </a-box>
+
+    <a-box class="destinations" id="5" position="50 0 -14" color="blue" material="opacity: 0; transparent: true">
+        <a-entity id="4" obj-model = "obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="-1 0 0" scale="0.2 0.2 0.2" rotation="0 90 0" visible="false"> </a-entity>        
+    </a-box>
     </a-scene>
 </body>
 </html> 
