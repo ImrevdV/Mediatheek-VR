@@ -7,11 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
-    <title>Dutch Design VR</title>
+    <title>Mediatheek VR</title>
 </head>
 
 <body>
     <a-scene background="color: #333333">
+        <a-assets>
+            <a-asset-item id="bookshelf-obj" src="/assets/bookshelf.obj"></a-asset-item>
+            <a-asset-item id="bookshelf-mtl" src="/assets/bookshelf.mtl"></a-asset-item>
+            <a-asset-item id="pc-obj" src="/assets/computer.obj"></a-asset-item>
+            <a-asset-item id="pc-mtl" src="/assets/computer.mtl"></a-asset-item>
+            <a-asset-item id="plekpaars-obj" src="/assets/werkplekPaars.obj"></a-asset-item>
+            <a-asset-item id="plekpaars-mtl" src="/assets/werkplekPaars.mtl"></a-asset-item>
+            <a-asset-item id="tafel-obj" src="/assets/tafel.obj"></a-asset-item>
+            <a-asset-item id="tafel-mtl" src="/assets/tafel.mtl"></a-asset-item>
+        </a-assets>
         <a-camera position="0 2.1 0">
             <a-entity
                 animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
@@ -22,6 +32,62 @@
                 material="color: #ffffff; shader: flat">
             </a-entity>
         </a-camera>
+        <!-- Stilteruimte -->
+        <a-entity position="0 -2 0">
+            <a-plane color="#CCC" side="double" material="" geometry="height: 12; width: 12" position="9 6 0"></a-plane>
+            <a-plane color="#CCC" side="double" material="" geometry="height: 12; width: 12" position="-9 6 0"></a-plane>
+            <a-plane color="#CCC" side="double" material="" geometry="height: 12; width: 20" position="-15 6 -10" rotation="0 90 0"></a-plane>
+            <a-plane color="#CCC" side="double" material="" geometry="height: 12; width: 20" position="15 6 -10" rotation="0 90 0"></a-plane>
+            <a-plane color="#CCC" side="double" material="" geometry="height: 12; width: 30" position="0 6 -20"></a-plane>
+            <!-- Werkplekken -->
+            <a-entity position="12 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl" rotation="0 -90 0">
+            </a-entity>
+            <a-entity position="6 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl" rotation="0 -90 0">
+            </a-entity>
+            <a-entity position="0 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl" rotation="0 -90 0">
+            </a-entity>
+            <a-entity position="-6 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl" rotation="0 -90 0">
+            </a-entity>
+            <a-entity position="-12 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl" rotation="0 -90 0">
+            </a-entity>
+            <!-- PC tafels -->
+            <a-entity position="-13.8 0 -7" scale="" obj-model="obj: #tafel-obj; mtl: #tafel-mtl" rotation="0 -90 0">
+                <a-entity position="1.3 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+                <a-entity position="-1.2 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+            </a-entity>
+            <a-entity position="13.8 0 -7" scale="" obj-model="obj: #tafel-obj; mtl: #tafel-mtl" rotation="0 90 0">
+                <a-entity position="1.3 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+                <a-entity position="-1.2 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+            </a-entity>
+            <a-entity position="6.3 0 -3.5" scale="" obj-model="obj: #tafel-obj; mtl: #tafel-mtl" rotation="0 90 0">
+                <a-entity position="1.3 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+                <a-entity position="-1.2 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+                <a-entity position="1.3 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+                <a-entity position="-1.2 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+            </a-entity>
+            <a-entity position="-6.3 0 -3.5" scale="" obj-model="obj: #tafel-obj; mtl: #tafel-mtl" rotation="0 -90 0">
+                <a-entity position="1.3 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+                <a-entity position="-1.2 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+                <a-entity position="1.3 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+                <a-entity position="-1.2 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+            </a-entity>
+            <a-circle material="color: #000000; opacity: 0.5" geometry="" scale="3 1 1" position="0 5 -10.01"></a-circle>
+            <a-text position="0 5 -10" text="width: 10; align: center; value: Stilteruime:; baseline: bottom"></a-text>
+            <a-text position="0 4.9 -10" text="width: 7; align: center; value: In alle rust studeren, zonder afspraak.; baseline: top"></a-text>
+        </a-entity>
+        
     </a-scene>
 </body>
 
