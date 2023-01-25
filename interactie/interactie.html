@@ -43,20 +43,15 @@
         <a-plane position="6 -1.5 -7" color="purple" width ="50" height="50" rotation= "-90 0 0"></a-plane>
         <a-plane position="30 -1.5 -7" color="purple" width ="50" height="50" rotation= "-90 0 0"></a-plane>
         <a-plane position="60 -1.5 -7" color="purple" width ="50" height="50" rotation= "-90 0 0"></a-plane>
-        <a-plane position="2 -1.5 -15" color="gray" width ="40" height="30" rotation= "0 0 0"></a-plane>
-        <a-plane position="22 -1.5 -25" color="gray" width ="20" height="30" rotation= "0 90 0"></a-plane>
-        <a-plane position="40 -1.5 -30" color="gray" width ="40" height="30" rotation= "0 0 0"></a-plane>
 
-        <a-box class="show" position="0 0.5 -13.5" color="brown" depth="3" width="6" height="0.2">
+        <a-box class="show" position="5 0.5 -24" color="brown" depth="3" width="6" height="0.2">
             <a-box position="-2 -5 0" color="black" height="10" depth="0.5" width="0.5"></a-box>
             <a-box position="2 -5 0" color="black" height="10" depth="0.5" width="0.5"></a-box>
             <a-entity obj-model = "obj: #computer-obj; mtl: #computer-mtl" class="show" position="-1.1 0.1 0 " rotation="0 -90 0" scale="1 1 1"> </a-entity>
             <a-entity obj-model = "obj: #computer-obj; mtl: #computer-mtl" class="show" position="1.1 0.1 0 " rotation="0 -90 0" scale="1 1 1"> </a-entity>
         </a-box>
 
-        <a-entity obj-model = "obj: #showtafel-obj; mtl: #showtafel-mtl" position="2 -1 10" rotation="0 90 0" scale="0.3 0.3 0.3"> </a-entity>
-
-        <a-plane class="bord" position="0 -6 -13.4"  color="black" width ="5" height="6" rotation= "0 0 0" material="opacity: 0.5; transparent: true">
+        <a-plane class="bord" position="5 -6 -22.4"  color="black" width ="5" height="6" rotation= "0 0 0" material="opacity: 0.5; transparent: true">
             <a-text  value="algemeen" position="-2 2.5 0">
                 <a-plane class="vind" id="0" position="2 0 -0.01"  color="black" width ="4" height="0.3" rotation= "0 0 0"></a-plane>
             </a-text>
@@ -116,11 +111,18 @@
             </a-text>
         </a-plane>
 
+        <a-plane position="10 0 -10" color="black" width ="0.1" height="0.1" material="opacity: 0; transparent: true">
         <a-entity obj-model = "obj: #werkplekOrangje-obj; mtl: #werkplekOrangje-mtl" position="10 -1 6" rotation="0 90 0"></a-entity>
         <a-entity obj-model = "obj: #werkplekOrangje-obj; mtl: #werkplekOrangje-mtl" position="16 -1 6" rotation="0 90 0"></a-entity>
 
         <a-entity obj-model = "obj: #werkplekOrangje-obj; mtl: #werkplekOrangje-mtl" position="53.5 -1 -15" rotation="0 180 0"></a-entity>
         <a-entity obj-model = "obj: #werkplekOrangje-obj; mtl: #werkplekOrangje-mtl" position="54.5 -1 -15" rotation="0 0 0"></a-entity>
+
+        <a-entity obj-model = "obj: #werkplekOrangje-obj; mtl: #werkplekOrangje-mtl" position="74 -1 -15" rotation="0 180 0"></a-entity>
+        <a-entity obj-model = "obj: #werkplekOrangje-obj; mtl: #werkplekOrangje-mtl" position="72 -1 -15" rotation="0 0 0"></a-entity>
+
+        <a-entity obj-model = "obj: #showtafel-obj; mtl: #showtafel-mtl" position="2 -1 10" rotation="0 90 0" scale="0.3 0.3 0.3"> </a-entity>
+        <a-entity obj-model = "obj: #showtafel-obj; mtl: #showtafel-mtl" position="76 -1 -10" rotation="0 -90 0" scale="0.3 0.3 0.3"> </a-entity>
 
         <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="6 -1.5 -12"> </a-entity>
         <a-box class="shine" position="6 0 -12" color="yellow" depth="6.1" height="7.5" width="1.1"  material="opacity: 0; transparent: true"></a-box>
@@ -160,6 +162,13 @@
 
         <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="6 -1.5 3"> </a-entity>
         <a-box class="shine" position="6 0 3" color="yellow" depth="6.1" height="7.5" width="1.1" material="opacity: 0; transparent: true"></a-box>
+
+        <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" position="68 -1.5 0" rotation="0 90 0"> </a-entity>
+        <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" position="74 -1.5 0" rotation="0 90 0"> </a-entity>
+        <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" position="72 -1.5 -20" rotation="0 90 0"> </a-entity>
+        <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" position="80 -1.5 -14"> </a-entity>
+        <a-entity obj-model = "obj: #boekenkast-obj; mtl: #boekenkast-mtl" position="86 -1.5 -14"> </a-entity>
+    </a-plane>
     </a-scene>
 </body>
 </html> 

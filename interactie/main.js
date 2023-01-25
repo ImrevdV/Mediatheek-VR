@@ -20,7 +20,7 @@ window.onload = () =>{
 
         show.onclick = (event) =>{
             console.log("klik");
-            bord[0].object3D.position.set(0, 2, -11.8);
+            bord[0].object3D.position.set(5, 2, -22.4);
             console.log(bord[0]);
         }
     }
