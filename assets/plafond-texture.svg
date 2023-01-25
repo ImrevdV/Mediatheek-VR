@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="2000mm"
+   height="2000mm"
+   viewBox="0 0 2000 2000"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="plafond-texture.svg"
+   inkscape:export-filename="plafond-texture.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.063307782"
+     inkscape:cx="2353.5811"
+     inkscape:cy="4699.2643"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Laag 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#f7f5ef;fill-rule:evenodd;stroke-width:0.4;stroke-linecap:round"
+       id="rect234"
+       width="2000"
+       height="2000"
+       x="-2.8421709e-14"
+       y="0" />
+    <rect
+       style="fill:#9d9d9d;fill-opacity:1;fill-rule:evenodd;stroke-width:0.96599;stroke-linecap:round"
+       id="rect290"
+       width="2000"
+       height="30"
+       x="-5.6843419e-14"
+       y="-15" />
+    <rect
+       style="fill:#9d9d9d;fill-opacity:1;fill-rule:evenodd;stroke-width:0.96599;stroke-linecap:round"
+       id="rect290-2"
+       width="2000"
+       height="30"
+       x="0"
+       y="485" />
+    <rect
+       style="fill:#9d9d9d;fill-opacity:1;fill-rule:evenodd;stroke-width:0.96599;stroke-linecap:round"
+       id="rect290-2-7"
+       width="2000"
+       height="30"
+       x="0"
+       y="985" />
+    <rect
+       style="fill:#9d9d9d;fill-opacity:1;fill-rule:evenodd;stroke-width:0.96599;stroke-linecap:round"
+       id="rect290-2-7-8"
+       width="2000"
+       height="30"
+       x="0"
+       y="1485" />
+    <rect
+       style="fill:#9d9d9d;fill-opacity:1;fill-rule:evenodd;stroke-width:0.96599;stroke-linecap:round"
+       id="rect290-2-7-8-3"
+       width="2000"
+       height="30"
+       x="0"
+       y="1985" />
+    <rect
+       style="fill:#9d9d9d;fill-opacity:1;fill-rule:evenodd;stroke-width:0.457318;stroke-linecap:round"
+       id="rect1041"
+       width="30"
+       height="2000"
+       x="-15"
+       y="0" />
+    <rect
+       style="fill:#9d9d9d;fill-opacity:1;fill-rule:evenodd;stroke-width:0.457318;stroke-linecap:round"
+       id="rect1041-4"
+       width="30"
+       height="2000"
+       x="985"
+       y="0" />
+    <rect
+       style="fill:#9d9d9d;fill-opacity:1;fill-rule:evenodd;stroke-width:0.457318;stroke-linecap:round"
+       id="rect1041-4-7"
+       width="30"
+       height="2000"
+       x="1985"
+       y="0" />
+  </g>
+</svg>
