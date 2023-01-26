@@ -27,6 +27,8 @@
             <a-asset-item id="plekpaars-mtl" src="/assets/werkplekPaars.mtl"></a-asset-item>
             <a-asset-item id="tafel-obj" src="/assets/tafel.obj"></a-asset-item>
             <a-asset-item id="tafel-mtl" src="/assets/tafel.mtl"></a-asset-item>
+            <a-asset-item id="printer-obj" src="/assets/printer.obj"></a-asset-item>
+            <a-asset-item id="printer-mtl" src="/assets/printer.mtl"></a-asset-item>
             <img id="plafond-texture" src="/assets/plafond-texture.png"></img>
             <img id="img-floor" src="/assets/tiledfloor.png"></img>
         </a-assets>
@@ -147,114 +149,160 @@
 
         <!-- Stilteruimtes -->
         <a-entity position="-2 -1 0" scale="0.5 0.5 0.5" rotation="0 90 0">
-            <a-plane color="#EFEFEF" side="double" material="" geometry="height: 12; width: 12" position="-9 6 0"></a-plane>
-            <a-plane color="#EFEFEF" side="double" material="" geometry="height: 12; width: 20" position="-15 6 -10" rotation="0 90 0"></a-plane>
-            <a-plane color="#EFEFEF" side="double" material="" geometry="height: 12; width: 20" position="15 6 -10" rotation="0 90 0"></a-plane>
-            <a-plane color="#EFEFEF" side="double" material="" geometry="height: 12; width: 30" position="0 6 -20"></a-plane>
+            <a-plane color="#EFEFEF" side="double" material="" geometry="height: 12; width: 12"
+                position="-9 6 0"></a-plane>
+            <a-plane color="#EFEFEF" side="double" material="" geometry="height: 12; width: 20" position="-15 6 -10"
+                rotation="0 90 0"></a-plane>
+            <a-plane color="#EFEFEF" side="double" material="" geometry="height: 12; width: 20" position="15 6 -10"
+                rotation="0 90 0"></a-plane>
+            <a-plane color="#EFEFEF" side="double" material="" geometry="height: 12; width: 30"
+                position="0 6 -20"></a-plane>
             <!-- Werkplekken -->
-            <a-entity position="12 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl" rotation="0 -90 0">
+            <a-entity position="12 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl"
+                rotation="0 -90 0">
             </a-entity>
-            <a-entity position="6 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl" rotation="0 -90 0">
+            <a-entity position="6 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl"
+                rotation="0 -90 0">
             </a-entity>
-            <a-entity position="0 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl" rotation="0 -90 0">
+            <a-entity position="0 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl"
+                rotation="0 -90 0">
             </a-entity>
-            <a-entity position="-6 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl" rotation="0 -90 0">
+            <a-entity position="-6 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl"
+                rotation="0 -90 0">
             </a-entity>
-            <a-entity position="-12 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl" rotation="0 -90 0">
+            <a-entity position="-12 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl"
+                rotation="0 -90 0">
             </a-entity>
             <!-- PC tafels -->
             <a-entity position="-13.8 0 -7" scale="" obj-model="obj: #tafel-obj; mtl: #tafel-mtl" rotation="0 -90 0">
-                <a-entity position="1.3 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="1.3 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
-                <a-entity position="-1.2 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="-1.2 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
             </a-entity>
             <a-entity position="13.8 0 -7" scale="" obj-model="obj: #tafel-obj; mtl: #tafel-mtl" rotation="0 90 0">
-                <a-entity position="1.3 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="1.3 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
-                <a-entity position="-1.2 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="-1.2 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
             </a-entity>
             <a-entity position="6.3 0 -3.5" scale="" obj-model="obj: #tafel-obj; mtl: #tafel-mtl" rotation="0 90 0">
-                <a-entity position="1.3 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="1.3 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
-                <a-entity position="-1.2 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="-1.2 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
-                <a-entity position="1.3 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="1.3 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
-                <a-entity position="-1.2 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="-1.2 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
             </a-entity>
             <a-entity position="-6.3 0 -3.5" scale="" obj-model="obj: #tafel-obj; mtl: #tafel-mtl" rotation="0 -90 0">
-                <a-entity position="1.3 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="1.3 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
-                <a-entity position="-1.2 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="-1.2 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
-                <a-entity position="1.3 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="1.3 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
-                <a-entity position="-1.2 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="-1.2 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
             </a-entity>
-            <a-circle material="color: #000000; opacity: 0.5" geometry="" scale="3 1 1" position="0 5 -10.01"></a-circle>
+            <a-circle material="color: #000000; opacity: 0.5" geometry="" scale="3 1 1"
+                position="0 5 -10.01"></a-circle>
             <a-text position="0 5 -10" text="width: 10; align: center; value: Stilteruime:; baseline: bottom"></a-text>
-            <a-text position="0 4.9 -10" text="width: 7; align: center; value: In alle rust studeren, zonder afspraak.; baseline: top"></a-text>
+            <a-text position="0 4.9 -10"
+                text="width: 7; align: center; value: In alle rust studeren, zonder afspraak.; baseline: top"></a-text>
         </a-entity>
 
         <a-entity position="27.5 -1 -9" scale="0.5 0.5 0.5" rotation="0 180 0">
-            <a-plane color="#EFEFEF" side="double" material="" geometry="height: 12; width: 20" position="-15 6 -10" rotation="0 90 0"></a-plane>
-            <a-plane color="#EFEFEF" side="double" material="" geometry="height: 12; width: 20" position="15 6 -10" rotation="0 90 0"></a-plane>
-            <a-plane color="#EFEFEF" side="double" material="" geometry="height: 12; width: 30" position="0 6 -20"></a-plane>
+            <a-plane color="#EFEFEF" side="double" material="" geometry="height: 12; width: 20" position="-15 6 -10"
+                rotation="0 90 0"></a-plane>
+            <a-plane color="#EFEFEF" side="double" material="" geometry="height: 12; width: 20" position="15 6 -10"
+                rotation="0 90 0"></a-plane>
+            <a-plane color="#EFEFEF" side="double" material="" geometry="height: 12; width: 30"
+                position="0 6 -20"></a-plane>
             <!-- Werkplekken -->
-            <a-entity position="12 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl" rotation="0 -90 0">
+            <a-entity position="12 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl"
+                rotation="0 -90 0">
             </a-entity>
-            <a-entity position="6 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl" rotation="0 -90 0">
+            <a-entity position="6 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl"
+                rotation="0 -90 0">
             </a-entity>
-            <a-entity position="0 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl" rotation="0 -90 0">
+            <a-entity position="0 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl"
+                rotation="0 -90 0">
             </a-entity>
-            <a-entity position="-6 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl" rotation="0 -90 0">
+            <a-entity position="-6 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl"
+                rotation="0 -90 0">
             </a-entity>
-            <a-entity position="-12 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl" rotation="0 -90 0">
+            <a-entity position="-12 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl"
+                rotation="0 -90 0">
             </a-entity>
             <!-- PC tafels -->
             <a-entity position="-13.8 0 -7" scale="" obj-model="obj: #tafel-obj; mtl: #tafel-mtl" rotation="0 -90 0">
-                <a-entity position="1.3 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="1.3 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
-                <a-entity position="-1.2 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="-1.2 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
             </a-entity>
             <a-entity position="13.8 0 -7" scale="" obj-model="obj: #tafel-obj; mtl: #tafel-mtl" rotation="0 90 0">
-                <a-entity position="1.3 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="1.3 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
-                <a-entity position="-1.2 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="-1.2 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
             </a-entity>
             <a-entity position="6.3 0 -3.5" scale="" obj-model="obj: #tafel-obj; mtl: #tafel-mtl" rotation="0 90 0">
-                <a-entity position="1.3 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="1.3 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
-                <a-entity position="-1.2 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="-1.2 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
-                <a-entity position="1.3 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="1.3 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
-                <a-entity position="-1.2 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="-1.2 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
             </a-entity>
             <a-entity position="-6.3 0 -3.5" scale="" obj-model="obj: #tafel-obj; mtl: #tafel-mtl" rotation="0 -90 0">
-                <a-entity position="1.3 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="1.3 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
-                <a-entity position="-1.2 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="-1.2 2.3 -1.5" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
-                <a-entity position="1.3 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="1.3 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
-                <a-entity position="-1.2 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0" obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                <a-entity position="-1.2 2.3 0.3" scale="0.6 0.6 0.6" rotation="0 -90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
             </a-entity>
-            <a-circle material="color: #000000; opacity: 0.5" geometry="" scale="3 1 1" position="0 5 -10.01"></a-circle>
+            <a-circle material="color: #000000; opacity: 0.5" geometry="" scale="3 1 1"
+                position="0 5 -10.01"></a-circle>
             <a-text position="0 5 -10" text="width: 10; align: center; value: Stilteruime:; baseline: bottom"></a-text>
-            <a-text position="0 4.9 -10" text="width: 7; align: center; value: In alle rust studeren, zonder afspraak.; baseline: top"></a-text>
+            <a-text position="0 4.9 -10"
+                text="width: 7; align: center; value: In alle rust studeren, zonder afspraak.; baseline: top"></a-text>
         </a-entity>
 
         <!--muren, vanaf binnenkomst, links beginnen-->
-        <a-plane position="-2   1.5 -5.25" side="double" rotation="0 90 0" height="5" width="7.5" color="#EFEFEF"></a-plane>
+        <a-plane position="-2   1.5 -5.25" side="double" rotation="0 90 0" height="5" width="7.5"
+            color="#EFEFEF"></a-plane>
         <a-plane position="-2.5 1.5 -9" rotation="0 180 0" height="5" width="1" color="#EFEFEF"></a-plane>
         <a-plane position="-3   1.5 -12" rotation="0 90 0" height="5" width="12" color="#EFEFEF"></a-plane>
         <a-plane position="4.5  1.5 -18" rotation="0 0 0" height="5" width="15" color="#EFEFEF"></a-plane>
@@ -262,8 +310,10 @@
         <a-plane position="26   1.5 -25" rotation="0 0 0" height="5" width="58" color="#EFEFEF"></a-plane>
         <a-plane position="55   1.5 -16.5" rotation="0 -90 0" height="5" width="18" color="#EFEFEF"></a-plane>
         <a-plane position="45 1.5 -9" side="double" rotation="0 180 0" height="5" width="32" color="#EFEFEF"></a-plane>
-        <a-plane position="14.5 1.5 -9" side="double" rotation="0 180 0" height="5" width="23" color="#EFEFEF"></a-plane>
-        <a-plane position="3 1.5 -4.5" rotation="0 -90 0" height="5" width="9" color="#EFEFEF"></a-plane>
+        <a-plane position="14.5 1.5 -9" side="double" rotation="0 180 0" height="5" width="23"
+            color="#EFEFEF"></a-plane>
+        <a-plane position="3 1.5 0" rotation="0 -90 0" height="5" width="18" color="#EFEFEF"></a-plane>
+        <a-plane position="0.5 1.5 7" rotation="0 180 0" height="5" width="5" color="#EFEFEF"></a-plane>
 
 
         <!--vloer-->
@@ -277,10 +327,10 @@
         <a-box class="show" position="3 0 -17.4" color="brown" depth="3" width="6" height="0.2" scale="0.5 0.5 0.5">
             <a-box position="-2 -5 0" color="black" height="10" depth="0.5" width="0.5"></a-box>
             <a-box position="2 -5 0" color="black" height="10" depth="0.5" width="0.5"></a-box>
-            <a-entity obj-model="obj: #pc-obj; mtl: #pc-mtl" class="show" position="-1.1 0.1 0 "
-                rotation="0 -90 0" scale="1 1 1"> </a-entity>
-            <a-entity obj-model="obj: #pc-obj; mtl: #pc-mtl" class="show" position="1.1 0.1 0 "
-                rotation="0 -90 0" scale="1 1 1"> </a-entity>
+            <a-entity obj-model="obj: #pc-obj; mtl: #pc-mtl" class="show" position="-1.1 0.1 0 " rotation="0 -90 0"
+                scale="1 1 1"> </a-entity>
+            <a-entity obj-model="obj: #pc-obj; mtl: #pc-mtl" class="show" position="1.1 0.1 0 " rotation="0 -90 0"
+                scale="1 1 1"> </a-entity>
         </a-box>
 
         <a-plane class="bord" position="5 -6 -14" color="black" width="5" height="6" rotation="0 0 0"
@@ -460,6 +510,41 @@
             </a-entity>
             <a-entity obj-model="obj: #boekenkast-obj; mtl: #boekenkast-mtl" position="80 -1.5 -14"> </a-entity>
             <a-entity obj-model="obj: #boekenkast-obj; mtl: #boekenkast-mtl" position="86 -1.5 -14"> </a-entity>
+
+            <!-- printerhoek -->
+            <a-entity position="15 -1.75 -17" scale="" obj-model="obj: #tafel-obj; mtl: #tafel-mtl" rotation="0 -90 0">
+                <a-entity position="1.3 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+            </a-entity>
+            <a-entity position="15 0 -23" scale="5 5 5" rotation="0 90 0"
+                obj-model="obj: #printer-obj; mtl: #printer-mtl">
+            </a-entity>
+
+            <a-entity position="27 -1.75 -25" scale="" obj-model="obj: #tafel-obj; mtl: #tafel-mtl" rotation="0 180 0">
+                <a-entity position="1.3 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+                <a-entity position="-1.2 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+            </a-entity>
+            <a-entity position="35 -1.75 -25" scale="" obj-model="obj: #tafel-obj; mtl: #tafel-mtl" rotation="0 180 0">
+                <a-entity position="1.3 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+                <a-entity position="-1.2 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+            </a-entity>
+            <a-entity position="43 -1.75 -25" scale="" obj-model="obj: #tafel-obj; mtl: #tafel-mtl" rotation="0 180 0">
+                <a-entity position="1.3 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+                <a-entity position="-1.2 2.3 -1.3" scale="0.6 0.6 0.6" rotation="0 90 0"
+                    obj-model="obj: #pc-obj; mtl: #pc-mtl">
+                </a-entity>
+            </a-entity>
         </a-plane>
 
         <a-box class="destinations" id="0" position="0 0 0" color="blue" material="opacity: 0; transparent: true">
@@ -481,6 +566,8 @@
                 scale="0.2 0.2 0.2" rotation="0 -90 0" visible="false"> </a-entity>
             <a-entity id="1" obj-model="obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="-1 0 0"
                 scale="0.2 0.2 0.2" rotation="0 90 0" visible="false"> </a-entity>
+            <a-entity id="8" obj-model="obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="0 0 -1"
+                scale="0.2 0.2 0.2" rotation="0 0 0" visible="false"> </a-entity>
         </a-box>
 
         <a-box class="destinations" id="3" position="27.5 0 -14" color="blue" material="opacity: 0; transparent: true">
@@ -490,6 +577,8 @@
                 scale="0.2 0.2 0.2" rotation="0 90 0" visible="false"> </a-entity>
             <a-entity id="7" obj-model="obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="0 0 1"
                 scale="0.2 0.2 0.2" rotation="0 180 0" visible="false"> </a-entity>
+            <a-entity id="9" obj-model="obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="0 0 -1"
+                scale="0.2 0.2 0.2" rotation="0 0 0" visible="false"> </a-entity>
         </a-box>
 
         <a-box class="destinations" id="4" position="40 0 -14" color="blue" material="opacity: 0; transparent: true">
@@ -512,6 +601,20 @@
         <a-box class="destinations" id="7" position="27.5 0 -6" color="blue" material="opacity: 0; transparent: true">
             <a-entity id="3" obj-model="obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="0 0 -1"
                 scale="0.2 0.2 0.2" rotation="0 0 0" visible="false"> </a-entity>
+        </a-box>
+
+        <a-box class="destinations" id="8" position="15 0 -22" color="blue" material="opacity: 0; transparent: true">
+            <a-entity id="2" obj-model="obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="0 0 1"
+                scale="0.2 0.2 0.2" rotation="0 180 0" visible="false"> </a-entity>
+            <a-entity id="9" obj-model="obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="1 0 0"
+                scale="0.2 0.2 0.2" rotation="0 -90 0" visible="false"> </a-entity>
+        </a-box>
+
+        <a-box class="destinations" id="9" position="27.5 0 -22" color="blue" material="opacity: 0; transparent: true">
+            <a-entity id="8" obj-model="obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="-1 0 0"
+                scale="0.2 0.2 0.2" rotation="0 90 0" visible="false"> </a-entity>
+            <a-entity id="3" obj-model="obj: #pijl-obj; mtl: #pijl-mtl" class="pijl" position="0 0 1"
+                scale="0.2 0.2 0.2" rotation="0 180 0" visible="false"> </a-entity>
         </a-box>
     </a-scene>
 </body>
