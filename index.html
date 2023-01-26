@@ -29,6 +29,7 @@
             <a-asset-item id="tafel-mtl" src="/assets/tafel.mtl"></a-asset-item>
             <a-asset-item id="printer-obj" src="/assets/printer.obj"></a-asset-item>
             <a-asset-item id="printer-mtl" src="/assets/printer.mtl"></a-asset-item>
+            <a-asset-item id="deur" src="/assets/deur.glb"></a-asset-item>
             <img id="plafond-texture" src="/assets/plafond-texture.png"></img>
             <img id="img-floor" src="/assets/tiledfloor.png"></img>
         </a-assets>
@@ -50,7 +51,7 @@
         </a-camera>
 
         <!--plafond en bijbehoren-->
-        <a-plane position="0 3 0" rotation="90 0 0" width="100" height="100"
+        <a-plane position="30 3 0" rotation="90 0 0" width="100" height="100"
             material="src: #plafond-texture; repeat: 50 50;">
         </a-plane>
 
@@ -157,6 +158,8 @@
                 rotation="0 90 0"></a-plane>
             <a-plane color="#EFEFEF" side="double" material="" geometry="height: 12; width: 30"
                 position="0 6 -20"></a-plane>
+            <a-entity position="3.5 4 -2.25" scale="4 4 4" rotation="0 180 0" gltf-model="#deur">
+            </a-entity>
             <!-- Werkplekken -->
             <a-entity position="12 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl"
                 rotation="0 -90 0">
@@ -232,6 +235,8 @@
                 rotation="0 90 0"></a-plane>
             <a-plane color="#EFEFEF" side="double" material="" geometry="height: 12; width: 30"
                 position="0 6 -20"></a-plane>
+            <a-entity position="3.5 4 -2.25" scale="4 4 4" rotation="0 180 0" gltf-model="#deur">
+            </a-entity>
             <!-- Werkplekken -->
             <a-entity position="12 1 -19.8" scale="" obj-model="obj: #plekpaars-obj; mtl: #plekpaars-mtl"
                 rotation="0 -90 0">
