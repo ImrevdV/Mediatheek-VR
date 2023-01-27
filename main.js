@@ -7,6 +7,8 @@ window.onload = () =>{
     let vindtextid = -1;
     const destinations = document.getElementsByClassName("destinations");
     const pijlen = document.getElementsByClassName("pijl");
+    const tijdschriftenkast = document.getElementById("tijdschriften");
+    var tijdschriftenkastOpen = false;
 
     const sleep = async (milliseconds) => {
         await new Promise(resolve => {
@@ -63,6 +65,28 @@ window.onload = () =>{
                 destination.children[i].setAttribute("visible", true); 
             }
     
+        }
+    }
+
+    for (let i = 0; i < tijdschriftenkast.childNodes.length; i++) {
+        let x = tijdschriftenkast.children;
+        x[i].onclick = (event) => {
+            console.log("yeah tijdschriften");
+            if (tijdschriftenkastOpen) {
+                console.log("open");
+                x[1].setAttribute("animation",
+                    "property: position; to: 0.15 0.025 -1; from: 0.15 0.18 -1");
+                x[1].setAttribute("animation__2",
+                    "property: rotation; to: 0 0 0; from: 0 0 60");
+            }
+            else {
+                console.log("dicht");
+                x[1].setAttribute("animation",
+                    "property: position; to: 0.15 0.18 -1; from: 0.15 0.025 -1");
+                x[1].setAttribute("animation__2",
+                    "property: rotation; to: 0 0 60; from: 0 0 0");
+            }
+            tijdschriftenkastOpen = !tijdschriftenkastOpen;
         }
     }
 
