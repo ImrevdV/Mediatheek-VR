@@ -13,25 +13,25 @@
 <body>
     <a-scene>
         <a-assets>
-            <a-asset-item id="showtafel-obj" src="/assets/showtafel.obj"></a-asset-item>
-            <a-asset-item id="showtafel-mtl" src="/assets/showtafel.mtl"></a-asset-item>
-            <a-asset-item id="boekenkast-obj" src="/assets/bookshelf.obj"></a-asset-item>
-            <a-asset-item id="boekenkast-mtl" src="/assets/bookshelf.mtl"></a-asset-item>
-            <a-asset-item id="pc-obj" src="/assets/computer.obj"></a-asset-item>
-            <a-asset-item id="pc-mtl" src="/assets/computer.mtl"></a-asset-item>
-            <a-asset-item id="werkplekOrangje-obj" src="/assets/werkplekOrange.obj"></a-asset-item>
-            <a-asset-item id="werkplekOrangje-mtl" src="/assets/werkplekOrange.mtl"></a-asset-item>
-            <a-asset-item id="pijl-obj" src="/assets/pijl.obj"></a-asset-item>
-            <a-asset-item id="pijl-mtl" src="/assets/pijl.mtl"></a-asset-item>
-            <a-asset-item id="plekpaars-obj" src="/assets/werkplekPaars.obj"></a-asset-item>
-            <a-asset-item id="plekpaars-mtl" src="/assets/werkplekPaars.mtl"></a-asset-item>
-            <a-asset-item id="tafel-obj" src="/assets/tafel.obj"></a-asset-item>
-            <a-asset-item id="tafel-mtl" src="/assets/tafel.mtl"></a-asset-item>
-            <a-asset-item id="printer-obj" src="/assets/printer.obj"></a-asset-item>
-            <a-asset-item id="printer-mtl" src="/assets/printer.mtl"></a-asset-item>
-            <a-asset-item id="deur" src="/assets/deur.glb"></a-asset-item>
-            <img id="plafond-texture" src="/assets/plafond-texture.png"></img>
-            <img id="img-floor" src="/assets/tiledfloor.png"></img>
+            <a-asset-item id="showtafel-obj" src="assets/showtafel.obj"></a-asset-item>
+            <a-asset-item id="showtafel-mtl" src="assets/showtafel.mtl"></a-asset-item>
+            <a-asset-item id="boekenkast-obj" src="assets/bookshelf.obj"></a-asset-item>
+            <a-asset-item id="boekenkast-mtl" src="assets/bookshelf.mtl"></a-asset-item>
+            <a-asset-item id="pc-obj" src="assets/computer.obj"></a-asset-item>
+            <a-asset-item id="pc-mtl" src="assets/computer.mtl"></a-asset-item>
+            <a-asset-item id="werkplekOrangje-obj" src="assets/werkplekOrange.obj"></a-asset-item>
+            <a-asset-item id="werkplekOrangje-mtl" src="assets/werkplekOrange.mtl"></a-asset-item>
+            <a-asset-item id="pijl-obj" src="assets/pijl.obj"></a-asset-item>
+            <a-asset-item id="pijl-mtl" src="assets/pijl.mtl"></a-asset-item>
+            <a-asset-item id="plekpaars-obj" src="assets/werkplekPaars.obj"></a-asset-item>
+            <a-asset-item id="plekpaars-mtl" src="assets/werkplekPaars.mtl"></a-asset-item>
+            <a-asset-item id="tafel-obj" src="assets/tafel.obj"></a-asset-item>
+            <a-asset-item id="tafel-mtl" src="assets/tafel.mtl"></a-asset-item>
+            <a-asset-item id="printer-obj" src="assets/printer.obj"></a-asset-item>
+            <a-asset-item id="printer-mtl" src="assets/printer.mtl"></a-asset-item>
+            <a-asset-item id="deur" src="assets/deur.glb"></a-asset-item>
+            <img id="plafond-texture" src="assets/plafond-texture.png"></img>
+            <img id="img-floor" src="assets/tiledfloor.png"></img>
         </a-assets>
 
         <a-camera id="camera" camera look-controls position="0 1 0" wasd-controls-enabled="false">
@@ -338,6 +338,12 @@
                 scale="1 1 1"> </a-entity>
         </a-box>
 
+        <a-circle material="color: #000000; opacity: 0.5" geometry="" scale="3 1 1"
+                position="3 2 -17.4"></a-circle>
+            <a-text position="3 2 -17.4" text="width: 10; align: center; value: Catalogues:; baseline: bottom"></a-text>
+            <a-text position="3 1.9 -17.4"
+                text="width: 7; align: center; value: Zoek de rubriek van jouw studie.; baseline: top"></a-text>
+
         <a-plane class="bord" position="5 -6 -14" color="black" width="5" height="6" rotation="0 0 0"
             material="opacity: 0.5; transparent: true" scale="0.5 0.5 0.5">
             <a-text value="algemeen" position="-2 2.5 0">
@@ -499,9 +505,9 @@
             <a-box class="shine" position="42 0 -14" color="yellow" depth="6.1" height="7.5" width="1.1"
                 material="opacity: 0; transparent: true"></a-box>
 
-            <a-entity obj-model="obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="54 -1.5 -20"
-                rotation="0 90 0"> </a-entity>
-            <a-box class="shine" position="54 0 -20" color="yellow" depth="6.1" height="7.5" width="1.1"
+            <a-entity obj-model="obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="54 -1.5 -20" rotation="0 90 0"> 
+            </a-entity>
+            <a-box class="shine" position="54 0 -20" color="yellow" depth="6.1" height="7.5" width="1.1" rotation="0 90 0"
                 material="opacity: 0; transparent: true"></a-box>
 
             <a-entity obj-model="obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="66 -1.5 -14">
@@ -509,34 +515,34 @@
             <a-box class="shine" position="66 0 -14" color="yellow" depth="6.1" height="7.5" width="1.1"
                 material="opacity: 0; transparent: true"></a-box>
 
-            <a-entity obj-model="obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="54 -1.5 -9"
-                rotation="0 90 0"> </a-entity>
-            <a-box class="shine" position="54 0 -9" color="yellow" depth="6.1" height="7.5" width="1.1"
+            <a-entity obj-model="obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="54 -1.5 -9"rotation="0 90 0">
+            </a-entity>
+            <a-box class="shine" position="54 0 -9" color="yellow" depth="6.1" height="7.5" width="1.1" rotation="0 90 0"
                 material="opacity: 0; transparent: true"></a-box>
 
             <a-entity obj-model="obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="36 -1.5 2.75">
             </a-entity>
-            <a-box class="shine" position="36 0 3" color="yellow" depth="6.1" height="7.5" width="1.1"
+            <a-box class="shine" position="36 0 2.75" color="yellow" depth="6.1" height="7.5" width="1.1"
                 material="opacity: 0; transparent: true"></a-box>
 
             <a-entity obj-model="obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="33 -1.5 2.75">
             </a-entity>
-            <a-box class="shine" position="33 0 3" color="yellow" depth="10" height="6" width="1.5" scale="1.1 1.1 1.1"
+            <a-box class="shine" position="33 0 2.75" color="yellow" depth="6.1" height="7.5" width="1.1"
                 material="opacity: 0; transparent: true"></a-box>
 
             <a-entity obj-model="obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="30 -1.5 2.75">
             </a-entity>
-            <a-box class="shine" position="30 0 3" color="yellow" depth="6.1" height="7.5" width="1.1"
+            <a-box class="shine" position="30 0 2.75" color="yellow" depth="6.1" height="7.5" width="1.1"
                 material="opacity: 0; transparent: true"></a-box>
 
             <a-entity obj-model="obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="24 -1.5 2.75">
             </a-entity>
-            <a-box class="shine" position="24 0 3" color="yellow" depth="6.1" height="7.5" width="1.1"
+            <a-box class="shine" position="24 0 2.75" color="yellow" depth="6.1" height="7.5" width="1.1"
                 material="opacity: 0; transparent: true"></a-box>
 
             <a-entity obj-model="obj: #boekenkast-obj; mtl: #boekenkast-mtl" class="kast" position="6 -1.5 2.75">
             </a-entity>
-            <a-box class="shine" position="6 0 3" color="yellow" depth="6.1" height="7.5" width="1.1"
+            <a-box class="shine" position="6 0 2.75" color="yellow" depth="6.1" height="7.5" width="1.1"
                 material="opacity: 0; transparent: true"></a-box>
 
             <a-entity obj-model="obj: #boekenkast-obj; mtl: #boekenkast-mtl" position="68 -1.5 0" rotation="0 90 0">
