@@ -27,11 +27,12 @@
             <a-asset-item id="plekpaars-mtl" src="assets/werkplekPaars.mtl"></a-asset-item>
             <a-asset-item id="tafel-obj" src="assets/tafel.obj"></a-asset-item>
             <a-asset-item id="tafel-mtl" src="assets/tafel.mtl"></a-asset-item>
-            <a-asset-item id="printer-obj" src="assets/printer.obj"></a-asset-item>
-            <a-asset-item id="printer-mtl" src="assets/printer.mtl"></a-asset-item>
+            <a-asset-item id="printer-obj" src="assets/printer.glb"></a-asset-item>
             <a-asset-item id="deur" src="assets/deur.glb"></a-asset-item>
-            <img id="plafond-texture" src="assets/plafond-texture.png"></img>
-            <img id="img-floor" src="assets/tiledfloor.png"></img>
+            <a-asset-item id="tijdschriftenkast" src="assets/tijdschriftenkast_animation.glb"></a-asset-item>
+            <a-asset-item id="plank" src="assets/plank_animation.glb"></a-asset-item>
+            <img id="plafond-texture" src="assets/plafond-texture.png">
+            <img id="img-floor" src="assets/tiledfloor.png">
         </a-assets>
 
         <a-camera id="camera" camera look-controls position="0 1 0" wasd-controls-enabled="false">
@@ -54,98 +55,104 @@
         <a-plane position="30 3 0" rotation="90 0 0" width="100" height="100"
             material="src: #plafond-texture; repeat: 50 50;">
         </a-plane>
-
         <!--<a-plane position="0 3 0" rotation="90 0 0" height="100" width="100" color="white"></a-plane>-->
+        
         <!--lampen-->
-        <a-entity position="0.25 0 -1.25">
-            <a-box position="-2.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="-2.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5"
-                rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-
-            <a-box position="1.5 3 -1.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="1.5 3 -4" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="1.5 3 -6.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="1.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="1.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-
-            <a-box position="5.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="5.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-
-            <a-box position="9.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="9.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-
-            <a-box position="13.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="13.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5"
-                rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="13.5 3 -14" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="13.5 3 -16.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5"
-                rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-
-            <a-box position="17.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="17.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5"
-                rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="17.5 3 -14" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="17.5 3 -16.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5"
-                rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-
-            <a-box position="21.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="21.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5"
-                rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="21.5 3 -14" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="21.5 3 -16.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5"
-                rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-
-            <a-box position="25.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="25.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5"
-                rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="25.5 3 -14" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="25.5 3 -16.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5"
-                rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-
-            <a-box position="29.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="29.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5"
-                rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="29.5 3 -14" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="29.5 3 -16.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5"
-                rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-
-            <a-box position="33.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="33.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5"
-                rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="33.5 3 -14" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="33.5 3 -16.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5"
-                rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-
-            <a-box position="37.5 3 -9" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="37.5 3 -11.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5"
-                rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="37.5 3 -14" light="type: point; intensity: 0.1; distance: 5; decay: 1.5" rotation="90 0 0"
-                height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
-            <a-box position="37.5 3 -16.5" light="type: point; intensity: 0.1; distance: 5; decay: 1.5"
-                rotation="90 0 0" height="0.5" width="0.5" depth="0.01" color="#FFEBAC"></a-box>
+        <a-entity position="0.75 3 -1.25">
+            <a-entity position="-10 0 0">
+                <a-box position="0 0 6" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 1" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -4" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+            </a-entity>
+            <a-entity position="-6 0 0">
+                <a-box position="0 0 3.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -1.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+            </a-entity>
+            <a-entity position="-2 0 0">
+                <a-box position="0 0 6" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 1" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -4" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -9" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -14" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+            </a-entity>
+            <a-entity position="2 0 0">
+                <a-box position="0 0 3.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -1.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -6.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -11.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -16.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+            </a-entity>
+            <a-entity position="6 0 0">
+                <a-box position="0 0 -9" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -14" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+            </a-entity>
+            <a-entity position="10 0 0">
+                <a-box position="0 0 -11.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -16.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+            </a-entity>
+            <a-entity position="14 0 0">
+                <a-box position="0 0 -9" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -14" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -19" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+            </a-entity>
+            <a-entity position="18 0 0">
+                <a-box position="0 0 -11.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -16.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -21.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+            </a-entity>
+            <a-entity position="22 0 0">
+                <a-box position="0 0 1" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -4" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -9" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -14" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -19" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+            </a-entity>
+            <a-entity position="26 0 0">
+                <a-box position="0 0 -1.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -6.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -11.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -16.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -21.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+            </a-entity>
+            <a-entity position="30 0 0">
+                <a-box position="0 0 1" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -4" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -9" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -14" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -19" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+            </a-entity>
+            <a-entity position="34 0 0">
+                <a-box position="0 0 -1.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -6.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -11.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -16.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -21.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+            </a-entity>
+            <a-entity position="38 0 0">
+                <a-box position="0 0 -9" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -14" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -19" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+            </a-entity>
+            <a-entity position="42 0 0">
+                <a-box position="0 0 -11.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -16.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -21.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+            </a-entity>
+            <a-entity position="46 0 0">
+                <a-box position="0 0 -9" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -14" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -19" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+            </a-entity>
+            <a-entity position="50 0 0">
+                <a-box position="0 0 -11.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -16.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -21.5" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+            </a-entity>
+            <a-entity position="54 0 0">
+                <a-box position="0 0 -9" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -14" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+                <a-box position="0 0 -19" light="type: point; intensity: 0.1; distance: 15; decay: 1" color="#FFEBAC" rotation="90 0 0" height="0.5" width="0.5" depth="0.01" ></a-box>
+            </a-entity>
         </a-entity>
 
         <!-- Stilteruimtes -->
@@ -223,7 +230,7 @@
             </a-entity>
             <a-circle material="color: #000000; opacity: 0.5" geometry="" scale="3 1 1"
                 position="0 5 -10.01"></a-circle>
-            <a-text position="0 5 -10" text="width: 10; align: center; value: Stilteruime:; baseline: bottom"></a-text>
+            <a-text position="0 5 -10" text="width: 10; align: center; value: Stilteruimte:; baseline: bottom"></a-text>
             <a-text position="0 4.9 -10"
                 text="width: 7; align: center; value: In alle rust studeren, zonder afspraak.; baseline: top"></a-text>
         </a-entity>
@@ -300,25 +307,25 @@
             </a-entity>
             <a-circle material="color: #000000; opacity: 0.5" geometry="" scale="3 1 1"
                 position="0 5 -10.01"></a-circle>
-            <a-text position="0 5 -10" text="width: 10; align: center; value: Stilteruime:; baseline: bottom"></a-text>
+            <a-text position="0 5 -10" text="width: 10; align: center; value: Stilteruimte:; baseline: bottom"></a-text>
             <a-text position="0 4.9 -10"
                 text="width: 7; align: center; value: In alle rust studeren, zonder afspraak.; baseline: top"></a-text>
         </a-entity>
 
         <!--muren, vanaf binnenkomst, links beginnen-->
         <a-plane position="-2   1.5 -5.25" side="double" rotation="0 90 0" height="5" width="7.5"
-            color="#EFEFEF"></a-plane>
-        <a-plane position="-2.5 1.5 -9" rotation="0 180 0" height="5" width="1" color="#EFEFEF"></a-plane>
-        <a-plane position="-3   1.5 -12" rotation="0 90 0" height="5" width="12" color="#EFEFEF"></a-plane>
-        <a-plane position="4.5  1.5 -18" rotation="0 0 0" height="5" width="15" color="#EFEFEF"></a-plane>
-        <a-plane position="12   1.5 -22.5" rotation="0 90 0" height="5" width="9" color="#EFEFEF"></a-plane>
-        <a-plane position="26   1.5 -25" rotation="0 0 0" height="5" width="58" color="#EFEFEF"></a-plane>
-        <a-plane position="55   1.5 -16.5" rotation="0 -90 0" height="5" width="18" color="#EFEFEF"></a-plane>
-        <a-plane position="45 1.5 -9" side="double" rotation="0 180 0" height="5" width="32" color="#EFEFEF"></a-plane>
+            color="#D1D1D1"></a-plane>
+        <a-plane position="-2.5 1.5 -9" rotation="0 180 0" height="5" width="1" color="#D1D1D1"></a-plane>
+        <a-plane position="-3   1.5 -12" rotation="0 90 0" height="5" width="12" color="#D1D1D1"></a-plane>
+        <a-plane position="4.5  1.5 -18" rotation="0 0 0" height="5" width="15" color="#D1D1D1"></a-plane>
+        <a-plane position="12   1.5 -22.5" rotation="0 90 0" height="5" width="9" color="#D1D1D1"></a-plane>
+        <a-plane position="26   1.5 -25" rotation="0 0 0" height="5" width="58" color="#D1D1D1"></a-plane>
+        <a-plane position="55   1.5 -16.5" rotation="0 -90 0" height="5" width="18" color="#D1D1D1"></a-plane>
+        <a-plane position="45 1.5 -9" side="double" rotation="0 180 0" height="5" width="32" color="#D1D1D1"></a-plane>
         <a-plane position="14.5 1.5 -9" side="double" rotation="0 180 0" height="5" width="23"
-            color="#EFEFEF"></a-plane>
-        <a-plane position="3 1.5 0" rotation="0 -90 0" height="5" width="18" color="#EFEFEF"></a-plane>
-        <a-plane position="0.5 1.5 7" rotation="0 180 0" height="5" width="5" color="#EFEFEF"></a-plane>
+            color="#D1D1D1"></a-plane>
+        <a-plane position="3 1.5 0" rotation="0 -90 0" height="5" width="18" color="#D1D1D1"></a-plane>
+        <a-plane position="0.5 1.5 7" rotation="0 180 0" height="5" width="5" color="#D1D1D1"></a-plane>
 
 
         <!--vloer-->
@@ -340,7 +347,7 @@
 
         <a-circle material="color: #000000; opacity: 0.5" geometry="" scale="3 1 1"
                 position="3 2 -17.4"></a-circle>
-            <a-text position="3 2 -17.4" text="width: 10; align: center; value: Catalogues:; baseline: bottom"></a-text>
+            <a-text position="3 2 -17.4" text="width: 10; align: center; value: Catalogus:; baseline: bottom"></a-text>
             <a-text position="3 1.9 -17.4"
                 text="width: 7; align: center; value: Zoek de rubriek van jouw studie.; baseline: top"></a-text>
 
@@ -424,8 +431,17 @@
             </a-text>
         </a-plane>
 
+            
+        
+
         <a-plane position="5 -0.2 -12" color="black" width="0.1" height="0.1" material="opacity: 0; transparent: true"
             scale="0.5 0.5 0.5">
+
+            <!--tijdschriftenkast-->
+            <a-entity id="tijdschriften" rotation="0 90 0" position="55 1.2 0" scale="2 2.5 2">
+                <a-entity gltf-model="#tijdschriftenkast"></a-entity>
+                <a-entity gltf-model="#plank" position="0.15 0.025 -1"></a-entity>
+            </a-entity>
 
             <a-box position="-13 -1 0" color="red" depth="3" width="9" height="7" scale="0.5 0.5 0.5" rotation="0 -90 0">
                 <a-entity obj-model="obj: #pc-obj; mtl: #pc-mtl" position="-1.25 3.5 0 " rotation="0 -90 0"
@@ -557,8 +573,8 @@
                     obj-model="obj: #pc-obj; mtl: #pc-mtl">
                 </a-entity>
             </a-entity>
-            <a-entity position="15 0 -23" scale="5 5 5" rotation="0 90 0"
-                obj-model="obj: #printer-obj; mtl: #printer-mtl">
+            <a-entity position="15 1 -23" scale="3.5 3.5 3.5" rotation="0 0 0"
+                gltf-model="#printer-obj">
             </a-entity>
 
             <a-entity position="27 -1.75 -25" scale="" obj-model="obj: #tafel-obj; mtl: #tafel-mtl" rotation="0 180 0">
